@@ -1,82 +1,12 @@
-body {
+body { 
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #f4f4f4;
-}
-header {
-  background: #2980b9;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-header h1 { margin: 0; }
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 1001;
-}
-.burger div {
-  width: 25px;
-  height: 3px;
-  background: #333;
-  margin: 5px 0;
-  border-radius: 2px;
-}
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: #fff;
-  padding: 10px 0;
-}
-.navigation a {
-  text-decoration: none;
   color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
 }
-.navigation a.active, .navigation a:hover {
-  background: #2980b9;
-  color: #fff;
-}
-@media (max-width: 768px) {
-  .burger { display: flex; }
-  .navigation {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
-  .navigation.active { display: flex; }
-}
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #2c3e50;
-  color: #fff;
-  font-size: 0.9em;
-}
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-/* Header mit Logo */
+
+/* HEADER mit Logo */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -87,6 +17,8 @@ footer a {
 .logo-container img {
   height: 60px;
 }
+
+/* NAVIGATION */
 .navigation {
   display: flex;
   gap: 20px;
@@ -95,12 +27,15 @@ footer a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
-.navigation a:hover, .navigation a.active {
-  text-decoration: underline;
+.navigation a:hover,
+.navigation a.active {
+  background: #3498db;
 }
 
-/* Burger Menü (mobil) */
+/* BURGER-MENÜ */
 .burger {
   display: none;
   flex-direction: column;
@@ -127,4 +62,28 @@ footer a {
   .navigation.active {
     display: flex;
   }
+}
+
+/* INHALT */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: #fff;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
