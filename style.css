@@ -76,3 +76,55 @@ footer a {
   color: #fff;
   text-decoration: underline;
 }
+/* Header mit Logo */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #2980b9;
+}
+.logo-container img {
+  height: 60px;
+}
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.navigation a:hover, .navigation a.active {
+  text-decoration: underline;
+}
+
+/* Burger Menü (mobil) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .burger { display: flex; }
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background: #2980b9;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    padding: 10px 0;
+  }
+  .navigation.active {
+    display: flex;
+  }
+}
